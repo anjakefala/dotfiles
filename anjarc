@@ -1,0 +1,10 @@
+set match-hidden-files off
+
+export LD_LIBRARY_PATH=/usr/local/lib
+
+export PYTHONPATH=.
+export LC_CTYPE=en_US.UTF8
+
+source ~/dotfiles/aliases
+
+umask 007

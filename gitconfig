@@ -1,0 +1,21 @@
+[user]
+	email = anja.kefala@gmail.com
+    name = anjakefala
+
+[push]
+	default = simple
+[alias]
+	unadd = reset HEAD
+	vdiff = difftool -y -t meld
+[credential]
+	helper = cache --timeout 360000
+[diff]
+	tool = vimdiff
+[merge]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+	cmd = vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
+[core]
+	pager = less -F -X

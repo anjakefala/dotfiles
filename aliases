@@ -1,0 +1,31 @@
+alias gd='git difftool'
+alias gdc='git difftool --cached'
+alias gvd='git vdiff'
+alias gvdc='git vdiff --cached'
+alias gc='git commit'
+
+alias fix='$EDITOR `git diff --name-only --diff-filter=U | uniq`'
+alias clswp='rm -f ~/.vim/swp/*'
+alias vtm='vim ~/tmux.conf'
+alias val='vim ~/dotfiles/aliases ; source ~/dotfiles/aliases'
+alias vvi='vim ~/dotfiles/vimrc'
+alias vzsh='vim ~/dotfiles/zshrc ; source ~/dotfiles/zshrc'
+alias sagi='sudo apt-get install'
+alias acs='apt-cache search'
+alias re='source ~/dotfiles/anjarc'
+
+gsys() {
+    grep -r $1 /usr/include/ /usr/local/include
+}
+
+alias newpair='tmux -S /tmp/pair new-session -s orig "chmod 0777 /tmp/pair && zsh"'
+alias pair='tmux -S /tmp/pair new-session -t orig'
+alias dotcommit='cd ~/dotfiles ; git commit -am "dotcommit" ; git push'
+
+alias ct='ctags -R -o tags .'
+
+DATA_ID=i-0073c88e4c13f26e3
+alias datastart="aws ec2 --profile saulpw start-instances --instance-ids $DATA_ID"
+
+alias anja='wemux join anja && wemux client rogue'
+alias saul='wemux join saul && wemux client rogue'

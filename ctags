@@ -1,0 +1,9 @@
+--recurse=yes
+--tag-relative=yes
+--exclude=.git
+--exclude=wwwroot
+--exclude=pub
+--exclude=priv
+--exclude=doc
+--extra=+f
+--python-kinds=-i
