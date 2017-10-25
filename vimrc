@@ -1,4 +1,22 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Getting Vundle to work
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
 
+" set the runtime path to include Vundle and initialise
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins I want installed
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'vim-polyglot'
+Plugin 'flazz/vim-colorschemes'
+call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -113,7 +131,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme GRB256
 catch
 endtry
 
@@ -291,6 +309,9 @@ map <leader>s? z=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+noremap Y y$
+inoremap <C-e> <C-o>$
 
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
