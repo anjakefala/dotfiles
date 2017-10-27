@@ -5,7 +5,7 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialise
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-polyglot'
 Plugin 'flazz/vim-colorschemes'
 call vundle#end()
+map <Leader>I :PluginInstall<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -42,6 +43,7 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
