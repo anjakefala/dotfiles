@@ -5,7 +5,7 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialise
-set rtp+=$HOME/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
@@ -24,6 +24,8 @@ map <Leader>I :PluginInstall<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
+
+filetype plugin indent on
 
 " Enable filetype plugins
 filetype plugin on
