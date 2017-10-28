@@ -24,6 +24,8 @@ for i in zshrc visdatarc vimrc tmux.conf ctags gitconfig bash_aliases ; do
     ln -sf `pwd`/$i ~/.$i
 done
 
+
+mkdir -p ~/.vim/bundle
 ln -sf `pwd`/Vundle.vim ~/.vim/bundle/Vundle.vim
 
 # change shell to zsh

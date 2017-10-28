@@ -4,3 +4,6 @@
 [submodule "Vundle.vim"]
 	path = Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
+[submodule "Vundle.Vim"]
+	path = Vundle.Vim
+	url = https://github.com/VundleVim/Vundle.Vim
