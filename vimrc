@@ -14,8 +14,24 @@ Plugin 'VundleVim/Vundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins I want installed
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'vim-polyglot'
 Plugin 'flazz/vim-colorschemes'
+
+" Syntax highlighting
+"Plugin 'vim-polyglot'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-unimpaired'
+" brackets and quotes
+Plugin 'tpope/vim-surround'
+
+
+" Prose
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+Plugin 'reedes/vim-pencil'
+map <F9> :Goyo <bar> :Limelight!! <bar> :TogglePencil <CR>
+
 call vundle#end()
 map <Leader>I :PluginInstall<cr>
 
@@ -63,13 +79,6 @@ source $VIMRUNTIME/menu.vim
 " Turn on the WiLd menu
 set wildmenu
 
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=.git\*,.hg\*,.svn\*
-else
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-endif
 
 "Always show current position
 set ruler
@@ -134,12 +143,17 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme GRB256
-catch
-endtry
+let g:solarized_termcolors=256
+let g:limelight_conceal_ctermfg=241
 
-set background=dark
+" So that vim does not lose its mind if there are '_' and we are editing a markdown file
+au BufRead *.markdown set ft=
+au BufRead *.md set ft=
+
+
+colorscheme solarized 
+
+set background=light
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -147,6 +161,7 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set background=light
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -220,6 +235,12 @@ map <leader>ba :bufdo bd<cr>
 
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
+
+" Saul's split stuff
+nnoremap <Leader>- :split<cr>
+nnoremap <Leader>\| :vsplit<cr>
+nnoremap <Leader><Delete> :qall<cr>
+nnoremap <Leader><S-Delete> :qall!<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
