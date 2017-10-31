@@ -28,9 +28,9 @@ Plugin 'tpope/vim-surround'
 
 " Prose
 Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
+"Plugin 'junegunn/limelight.vim'
 Plugin 'reedes/vim-pencil'
-map <F9> :Goyo <bar> :Limelight!! <bar> :TogglePencil <CR>
+map <F9> :Goyo <bar> :TogglePencil <CR>
 
 call vundle#end()
 map <Leader>I :PluginInstall<cr>
