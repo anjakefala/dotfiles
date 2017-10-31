@@ -20,7 +20,7 @@ mkdir -p ~/.vim/swp
 
 # install actual dot files
 
-for i in zshrc visdatarc vimrc tmux.conf ctags gitconfig bash_aliases ; do
+for i in zshrc visidatarc vimrc tmux.conf ctags gitconfig bash_aliases ; do
     ln -sf `pwd`/$i ~/.$i
 done
 
