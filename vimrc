@@ -280,3 +280,7 @@ if !&diff
   set undofile
 endif
 
+"" Status Line
+set laststatus=2
+set statusline=%t%h%m%r%=%c,%l/%L\ %P
+
