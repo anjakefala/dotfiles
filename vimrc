@@ -152,6 +152,9 @@ set tabstop=4 shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+set lbr
+set tw=500
+set smarttab
 set backspace=indent,eol,start
 
 "" Searching
@@ -282,5 +285,29 @@ endif
 
 "" Status Line
 set laststatus=2
-set statusline=%t%h%m%r%=%c,%l/%L\ %P
+set statusline=%t%h%m%r%=Line:\ %l\ \ Column:\ %c
+
+set history=500
+set autoread
+set so=7
+set ruler
+set lazyredraw
+set magic
+set showmatch
+set mat=2
+set noerrorbells
+set novisualbell
+set foldcolumn=1
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+if has("autocmd")
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+endif
 
