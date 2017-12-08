@@ -34,8 +34,7 @@ Plugin 'wesQ3/vim-windowswap'
 "Plugin 'powerline/powerline'
 
 " colorschemes
-" Plugin 'qualiabyte/vim-colorstepper'
-
+set t_Co=256
 " git
 "Plugin 'tpope/vim-fugitive'
 
