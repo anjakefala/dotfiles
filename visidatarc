@@ -1,3 +1,5 @@
 options.min_memory_mb=0
 options.cmd_after_edit="l"
 options.confirm_overwrite=False
+options.nuffin="Bah!"
+options.clipboard_copy_cmd="xsel --primary"

@@ -151,8 +151,8 @@ set tabstop=4 shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
-set lbr
-set tw=500
+"set linebreak
+set textwidth=500
 set smarttab
 set backspace=indent,eol,start
 
