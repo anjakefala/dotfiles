@@ -3,3 +3,6 @@ options.cmd_after_edit="l"
 options.confirm_overwrite=False
 options.nuffin="Bah!"
 options.clipboard_copy_cmd="xsel --primary"
+
+VisiData.allPrefixes += '1'
+alias(['gg', '1G'], 'view-go-far-top')
