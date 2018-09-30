@@ -1,7 +1,8 @@
 options.min_memory_mb=0
-options['cmd_after_edit'] = ""
+options['cmd_after_edit']=''
 options.confirm_overwrite=False
 options.nuffin="Bah!"
+options.motd_url='hi'
 options.clipboard_copy_cmd="xsel --primary"
 
 VisiData.allPrefixes += '1'

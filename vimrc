@@ -152,7 +152,8 @@ set expandtab
 set autoindent
 set smartindent
 "set linebreak
-set textwidth=500
+set textwidth=0
+set lbr
 set smarttab
 set backspace=indent,eol,start
 
