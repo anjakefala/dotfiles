@@ -3,4 +3,4 @@
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "z"]
 	path = z
-	url = /Users/anja/dotfiles/z
+	url = https://github.com/rupa/z
