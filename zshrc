@@ -63,8 +63,10 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/anja/.local/bin:/home/anja/dotfiles/bin:/home/anja/dotfiles/local/bin:$PATH"
+export PATH="/home/kefala/.local/bin:/home/kefala/dotfiles/bin:/home/kefala/dotfiles/local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+fpath=(/usr/share/zsh/functions/_visidata $fpath)
 
 source $ZSH/oh-my-zsh.sh
 

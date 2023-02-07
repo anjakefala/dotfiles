@@ -1,10 +1,32 @@
-options.quitguard=False
-options.min_memory_mb=0
-options['cmd_after_edit']=''
-options.confirm_overwrite=False
-options.nuffin="Bah!"
-options.motd_url='hi'
-options.clipboard_copy_cmd="xsel --primary"
+import functools
+import calendar
+import json
+#from vdplus import orgmode
 
-VisiData.allPrefixes += '1'
-bindkey('1G', 'go-top')
+
+## options
+options.min_memory_mb=0
+options.clipboard_copy_cmd="xsel --clipboard --input"
+options.clipboard_paste_cmd = "xsel --clipboard"
+options.color_column_sep = 'blue'
+options.confirm_overwrite=False
+options.input_history='lastinputs'
+#options.plugins_url="file:///home/kefala/git/visidata/plugins/plugins.jsonl"
+options.motd_url=''
+
+Sheet.bindkey(ESC+'r', 'repeat-last')
+
+options.some_selected_rows = True
+
+options.quitguard = True
+
+class DatSheet(CsvSheet):
+    pass
+
+vd.status('loaded visidatarc')
+
+options.quitguard=True
+
+options.scroll_incr = -3
+options.disp_formatter = 'python'
+from darkdraw import *

@@ -104,8 +104,6 @@ Plugin 'leafgarland/typescript-vim'
 
 " Markdown editing mode
 Plugin 'junegunn/goyo.vim'
-Plugin 'reedes/vim-pencil'
-map <F9> :Goyo <bar> :TogglePencil <CR>
 
 call vundle#end()            " required
 
@@ -311,3 +309,4 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
+ab coauth Co-authored-by: anjakefala <anja.kefala@gmail.com><CR>Co-authored-by: saulpw <code@saul.pw>
